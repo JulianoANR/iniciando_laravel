@@ -3,7 +3,7 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-echo 'dsdsd';
+echo 'teste';
 
 define('LARAVEL_START', microtime(true));
 
