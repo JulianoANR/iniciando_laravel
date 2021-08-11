@@ -3,10 +3,10 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-echo 'teste';
+echo 'teste htdocs';
 
 define('LARAVEL_START', microtime(true));
-echo 'teste';
+
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
