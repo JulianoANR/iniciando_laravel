@@ -24,3 +24,8 @@ Route::get('users/{id}/escola/{nome}', function ($id,$nome) {
 Route::get('produtos/inserir', function () {
     return "Pagina de inserir produto";
 });
+
+//parametro opicional
+Route::get('users/{id}/escola/{nome?}', function ($id, $nome = null) { 
+    return ("usuario e o seu id é $id e seu nome $nome");
+});
