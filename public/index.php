@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 echo 'dsdsd';
 
 define('LARAVEL_START', microtime(true));
-
+echo 'teste';
 /*
 |--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
