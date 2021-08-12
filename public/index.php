@@ -3,8 +3,6 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-echo 'teste htdocs 3';
-
 define('LARAVEL_START', microtime(true));
 
 /*
