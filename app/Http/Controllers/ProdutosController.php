@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\produto;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller{  
     public function index(){
-        return view('produtos.index');
+        $produtos = produto::paginate();//esta pegando do banco de dados
+        return view('produtos.index', ['produtos'=>$produtos]);
     }
 
     public function create(){
         return view('produtos.create');
     }
 
-    public function show($nome, $valor){//função coma parametros opicionais
+    public function show($nome, $valor){//função com parametros opicionais
         return view('produtos.show', ['nome' => $nome,'valor' => $valor]);
         /*
         if($valor){
@@ -23,5 +25,4 @@ class ProdutosController extends Controller{
         }
         */
     }
-
 }
