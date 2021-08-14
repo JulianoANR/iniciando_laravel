@@ -15,14 +15,19 @@ class ProdutosController extends Controller{
         return view('produtos.create');
     }
 
-    public function show($nome, $valor){//função com parametros opicionais
+    public function show($id){
+        return view('produtos.show', ['id' => $id]);
+    }
+
+    /*
+    public function show($nome, $valor = null){//função com parametros opicionais
         return view('produtos.show', ['nome' => $nome,'valor' => $valor]);
-        /*
+        
         if($valor){
             return "o Nome do produto é $nome, e seu valor é $valor";
         }else{
             return "o Nome do produto é $nome";
-        }
-        */
+        }       
     }
+    */
 }

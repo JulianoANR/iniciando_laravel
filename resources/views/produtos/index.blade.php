@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container m-4"></div>
-<a href="produtos/inserir" type="button" class="ml-4 mt-4 mb-4 btn btn-secondary">Inserir Produto</a>
+<a href="{{route('produtos.inserir')}}" type="button" class="ml-4 mt-4 mb-4 btn btn-secondary">Inserir Produto</a>
 
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
@@ -26,7 +26,9 @@
             <td>{{$produto->nome}}</td>
             <td>{{$produto->valor}}</td>
             <td>{{$produto->estoque}}</td>
-            <td>Ações</td>
+            <td>
+             <a href="{{route('produtos.descricao', "$produto->id")}}"><i class="fas fa-eye text-primary"></i></a>        
+            </td>
         </tr>
         @endforeach
       </tbody>
@@ -36,7 +38,7 @@
 </div>
 
 
-<!-- {{$produtos->links()}}-->
+{{$produtos->links()}}
 </div>
 
 @endsection
