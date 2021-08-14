@@ -27,7 +27,6 @@
                           <th>Ações</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         @foreach ($produtos as $produto)
                         <tr>
@@ -36,7 +35,7 @@
                             <td>{{$produto->estoque}}</td>
                             <td>
                                 <a href="{{route('produtos.descricao', "$produto->id")}}"><i
-                                        class="fas fa-eye text-danger fa-lg"></i></a>
+                                        class="fas fa-eye text-danger fa-lg ml-2"></i></a>
                             </td>
                         </tr>
                         @endforeach
