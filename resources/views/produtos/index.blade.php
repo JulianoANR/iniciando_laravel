@@ -2,13 +2,8 @@
 @section('title', 'Pagina index')
 @section('content')
 
-@section('extra-styles')
-<style>
-  i {
-    color: red;
-  }
-</style>  
-@endsection
+{{-- @section('extra-styles')
+@endsection --}}
 
 <div class="container-fluid p-3">
     <a href="{{route('produtos.inserir')}}" type="button" class="ml-4 mt-4 mb-4 btn btn-secondary">Inserir Produto</a>

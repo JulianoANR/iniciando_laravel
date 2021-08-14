@@ -16,7 +16,9 @@ class ProdutosController extends Controller{
     }
 
     public function show($id){
-        return view('produtos.show', ['id' => $id]);
+        $produto = Produto::find($id);//tabela Produto
+        //Ele ja filtra e traz o id.
+        return view('produtos.show', ['produto' => $produto]);
     }
 
     /*
