@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ProdutosController extends Controller{  
     public function index(){
-        $produtos = produto::paginate();//esta pegando do banco de dados
+        $produtos = produto::all();//esta pegando do banco de dados
         return view('produtos.index', ['produtos'=>$produtos]);
     }
 
@@ -26,6 +26,7 @@ class ProdutosController extends Controller{
         $produto->descricao = $request->descricao;
         //Comando para salvar no banco de dados:
         $produto->save();
+        return redirect()->route('produtos');
     }
 
     public function show($id){
