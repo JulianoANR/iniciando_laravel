@@ -29,8 +29,9 @@
                             <td>{{$produto->valor}}</td>
                             <td>{{$produto->estoque}}</td>
                             <td>
-                                <a href="{{route('produtos.descricao', "$produto->id")}}"><i
-                                        class="fas fa-eye text-danger fa-lg ml-2"></i></a>
+                                <a title="Detalhes" href="{{route('produtos.descricao', "$produto->id")}}"><i class="fas fa-eye text-primary fa-lg ml-2"></i></a>
+                                <a title="Edição" href="{{route('produtos.descricao', "$produto->id")}}"><i class="fas fa-edit text-primary fa-lg ml-2"></i></a>
+                                <a title="Apagar" href="{{route('produtos.descricao', "$produto->id")}}"><i class="fas fa-trash text-danger fa-lg ml-4"></i></a>
                             </td>
                         </tr>
                         @endforeach

@@ -21,3 +21,6 @@ Route::get('produtos/inserir', [ProdutosController::class, 'create'])->name('pro
 Route::get('produtos/{id}', [ProdutosController::class, 'show'])->name('produtos.descricao');
 //Route::get('produtos/{nome}/{valor?}', [ProdutosController::class, 'show'])->name('produtos.descricao');
 Route::get('produtos', [ProdutosController::class, 'index'])->name('produtos');
+//essas rotas podem ter o msm nome se tiverem metodos diferentes
+Route::post('produtos', [ProdutosController::class, 'insert'])->name('produtos.insert');
+

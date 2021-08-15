@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class produto extends Model
 {
+    //essa linha esta desabilitando as migrations, pq eu n estou usando models no curso.
+    public $timestamps = false;
+    
     use HasFactory;
 }
