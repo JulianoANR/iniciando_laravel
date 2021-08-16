@@ -55,8 +55,8 @@ class ProdutosController extends Controller{
         return redirect()->route('produtos');
     }
 
-    public function delete(produto $produto){
-        $produto->delete();// deleta no banco de dados
+    public function destroy(produto $produto){
+        //$produto->delete();// deleta no banco de dados        
         return redirect()->route('produtos');     
     }
 
