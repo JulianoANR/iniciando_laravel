@@ -24,3 +24,7 @@ Route::get('produtos', [ProdutosController::class, 'index'])->name('produtos');
 //essas rotas podem ter o msm nome se tiverem metodos diferentes
 Route::post('produtos', [ProdutosController::class, 'insert'])->name('produtos.insert');
 
+//edit produtos
+Route::get('produtos/{produto}/edit', [ProdutosController::class, 'edit'])->name('produtos.edit');
+Route::put('produtos/{produto}', [ProdutosController::class, 'editar'])->name('produtos.editar');
+
