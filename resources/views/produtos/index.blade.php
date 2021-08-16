@@ -3,7 +3,7 @@
 @section('content')
 
 {{-- @section('extra-styles')
-@endsection --}}
+@endsection --}} 
 
 <div class="container-fluid p-3">
     <a href="{{route('produtos.inserir')}}" type="button" class="ml-4 mt-4 mb-4 btn btn-secondary">Inserir Produto</a>
@@ -31,7 +31,7 @@
                             <td>
                                 <a title="Detalhes" href="{{route('produtos.descricao', "$produto->id")}}"><i class="fas fa-eye text-primary fa-lg ml-2"></i></a>
                                 <a title="Edição" href="{{route('produtos.edit', "$produto->id")}}"><i class="fas fa-edit text-primary fa-lg ml-2"></i></a>
-                                <a title="Apagar" data-bs-toggle="modal" data-bs-target="#exampleModal" href=""><i class="fas fa-trash text-danger fa-lg ml-4"></i></a>
+                                <a title="Apagar" href="{{route('produtos.modal', "$produto->id")}}"><i class="fas fa-trash text-danger fa-lg ml-4"></i></a>
                             </td>
                         </tr>
                         @endforeach
@@ -43,6 +43,7 @@
 </div>
 {{-- {{$produtos->links()}} --}}
 </div>
+{{-- data-bs-toggle="modal" data-bs-target="#exampleModal" --}}
 
 {{-- <script>
     $(document).ready(function () {
@@ -62,7 +63,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <form method="POST" action="{{route('produtos.delete', "$produto->id")}}">
+          <form method="POST" action="{{route('produtos.delete', "$id")}}">
             @csrf
             @method('delete')
             <button type="submit" class="btn btn-danger">Confirmar</button>
@@ -71,5 +72,8 @@
       </div>
     </div>
   </div>
+
+<?php //Chamada da modal, caso seja passado um id
+
 
 @endsection
