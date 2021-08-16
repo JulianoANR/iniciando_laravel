@@ -55,6 +55,11 @@ class ProdutosController extends Controller{
         return redirect()->route('produtos');
     }
 
+    public function delete(produto $produto){
+        $produto->delete();// deleta no banco de dados
+        return redirect()->route('produtos');     
+    }
+
     /*
     public function show($nome, $valor = null){//função com parametros opicionais
         return view('produtos.show', ['nome' => $nome,'valor' => $valor]);
