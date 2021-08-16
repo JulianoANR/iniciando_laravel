@@ -60,11 +60,6 @@ class ProdutosController extends Controller{
         return redirect()->route('produtos');     
     }
 
-    public function modal(produto $id){
-        $produtos = produto::all();
-        return view('produtos.index', ['produtos'=>$produtos, 'id' => $id]);
-    }
-
     /*
     public function show($nome, $valor = null){//função com parametros opicionais
         return view('produtos.show', ['nome' => $nome,'valor' => $valor]);
