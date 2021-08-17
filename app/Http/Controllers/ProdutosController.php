@@ -58,6 +58,7 @@ class ProdutosController extends Controller{
     public function destroy(produto $produto){
         //Essa linha usa where para filtra no banco de dados
         //$produto = produto::where('id','<',10);
+        //$produto = produto::where('id','<',10)->where('id','>',100);
         //$produto->delete();// deleta no banco de dados        
         return redirect()->route('produtos');     
     }
