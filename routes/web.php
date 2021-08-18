@@ -16,7 +16,7 @@ use App\Http\Controllers\UsuariosController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('produtos/inserir', [ProdutosController::class, 'create'])->name('produtos.inserir');
 Route::get('produtos/{id}', [ProdutosController::class, 'show'])->name('produtos.descricao');
@@ -34,4 +34,4 @@ Route::put('produtos/{produto}', [ProdutosController::class, 'editar'])->name('p
 Route::delete('produtos/{id}/delete', [ProdutosController::class, 'destroy'])->name('produtos.destroy');
 
 //login
-Route::post('usuarios', [UsuariosController::class, 'login'])->name('usuarios.login');
+Route::post('produtos', [UsuariosController::class, 'login'])->name('usuarios.login');
