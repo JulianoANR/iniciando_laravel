@@ -35,7 +35,7 @@ class ProdutosController extends Controller{
         return view('produtos.show', ['produto' => $produto]);
     }
 
-    public function edit(produto $produto){
+    public function edit(Produto $produto){
         return view('produtos.edit', ['produto' => $produto]);
         //$produto = Produto::find($id);//tabela Produto
         //Ele ja filtra e traz o id.
@@ -55,7 +55,7 @@ class ProdutosController extends Controller{
         return redirect()->route('produtos');
     }
 
-    public function destroy(produto $produto){
+    public function destroy(Produto $produto){
         //Essa linha usa where para filtra no banco de dados
         //$produto = produto::where('id','<',10);
         //$produto = produto::where('id','<',10)->where('id','>',100);

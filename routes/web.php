@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdutosController;
+use App\Http\Controllers\UsuariosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::put('produtos/{produto}', [ProdutosController::class, 'editar'])->name('p
 //delete
 //Route::get('produtos/{produto}/delete', [ProdutosController::class, 'modal'])->name('produtos.modal');
 Route::delete('produtos/{id}/delete', [ProdutosController::class, 'destroy'])->name('produtos.destroy');
+
+//login
+Route::post('usuarios', [UsuariosController::class, 'login'])->name('usuarios.login');
