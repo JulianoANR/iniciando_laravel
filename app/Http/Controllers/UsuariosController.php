@@ -10,8 +10,6 @@ class UsuariosController extends Controller
 {
     public function login(Request $request){
 
-
-
         $email = $request->email;
         $senha = $request->senha;
         
